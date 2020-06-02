@@ -3,8 +3,12 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "web": "expo start --web"
-  },
+    "web": "expo start --web",
+    "test": "jest"
+    },
+    "jest": {
+      "preset": "react-native"
+    },
   "dependencies": {
     "expo": "~37.0.3",
     "expo-splash-screen": "^0.2.3",

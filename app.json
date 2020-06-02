@@ -23,10 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "employeeapp"
+      "bundleIdentifier": "employee.app"
     },
     "android": {
-      "package": "employeeapp"
+      "package": "employee.app"
     },
     "entryPoint": "node_modules/expo/AppEntry.js"
   }

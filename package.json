@@ -5,11 +5,11 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "test": "jest",
-    "build-android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew clean && ./gradlew assembleRelease"
-    },
-    "jest": {
-      "preset": "react-native"
-    },
+    "build-android": "react-native bundle --verbose --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew clean && ./gradlew assembleRelease"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
   "dependencies": {
     "expo": "~37.0.3",
     "expo-splash-screen": "^0.2.3",

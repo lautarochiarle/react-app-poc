@@ -1,29 +1,30 @@
 import React from 'react';
+import { Authenticator } from "aws-amplify-react-native";
+import Amplify from "aws-amplify";
+import AuthWrapper from "./AuthWrapper";
+import { withAuthenticator } from 'aws-amplify-react-native';
+
 import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/Home'
-import Amplify from 'aws-amplify';
 import awsConfig from './src/aws-exports';
+
 
 Amplify.configure(awsConfig);
 
-import { withAuthenticator } from 'aws-amplify-react-native';
 
 function App() {
   return (
-    <View style={styles.container}>
-      <Home></Home>
+    <View >
+      <View >
+        <Authenticator hideDefault={true} amplifyConfig={awsConfig}>
+          <AuthWrapper />
+        </Authenticator>
+      </View>
     </View>
   );
 }
 
+//export default withAuthenticator(App);
+export default App;
 
-export default withAuthenticator(App);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ebebeb',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+

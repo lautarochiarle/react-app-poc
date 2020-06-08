@@ -6,4 +6,4 @@ const awsConfig = {
     userPoolWebClientId: '11fq26p6ms9m99i6ol3okifpgb'
   }
   
-  export default awsConfig;
+export default awsConfig;

@@ -60,7 +60,7 @@ export class CustomSignIn extends Component {
  render() {
     return (
        <View style = {styles.container}>
-              {this._validAuthStates.includes(this.props.authState) && (
+            {this._validAuthStates.includes(this.props.authState) && (
         <View style={styles.subcontainer}>
        <TextInput style = {styles.input}
              underlineColorAndroid = "transparent"
@@ -82,11 +82,8 @@ export class CustomSignIn extends Component {
              <Text style = {styles.submitButtonText}> Submit </Text>
           </TouchableOpacity>
           </View>
-       )}
+              )}
        </View>
-
-          
-
     )
  }
 }
@@ -94,9 +91,10 @@ export default CustomSignIn
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     top: 50,
     paddingTop: 123,
+    paddingBottom: 0,
+    end: 0,
     borderWidth: 1,
     borderColor: 'blue'
  },

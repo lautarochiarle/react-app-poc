@@ -13,13 +13,13 @@ Amplify.configure(awsConfig);
 
 function App() {
   return (
-    <View >
-      <View >
+    
+      
         <Authenticator hideDefault={true} amplifyConfig={awsConfig}>
           <AuthWrapper />
         </Authenticator>
-      </View>
-    </View>
+      
+    
   );
 }
 

@@ -20,9 +20,11 @@ export class CustomSignIn extends Component {
   }  
   
  handleEmail = (text) => {
+    alert(text);
     this.setState({ email: text })
  }
  handlePassword = (text) => {
+    alert(text);
     this.setState({ password: text })
  }
 
@@ -58,9 +60,9 @@ export class CustomSignIn extends Component {
  render() {
     return (
        <View style = {styles.container}>
-       {this._validAuthStates.includes(this.props.authState) && (
-        <View >
-          <TextInput style = {styles.input}
+              {this._validAuthStates.includes(this.props.authState) && (
+        <View style={styles.subcontainer}>
+       <TextInput style = {styles.input}
              underlineColorAndroid = "transparent"
              placeholder = "Email"
              placeholderTextColor = "#9a73ef"
@@ -79,21 +81,35 @@ export class CustomSignIn extends Component {
              onPress = {this.signIn}>
              <Text style = {styles.submitButtonText}> Submit </Text>
           </TouchableOpacity>
-       </View>
+          </View>
        )}
        </View>
+
+          
+
     )
  }
 }
 export default CustomSignIn
 
 const styles = StyleSheet.create({
- container: {
-    paddingTop: 23
+  container: {
+    flex: 1,
+    top: 50,
+    paddingTop: 123,
+    borderWidth: 1,
+    borderColor: 'blue'
+ },
+ subcontainer:{   
+   borderWidth: 1,
+   borderColor: 'red',
+   paddingTop: 123,
  },
  input: {
-    margin: 15,
-    height: 40,
+  paddingBottom:0,
+  padding: 0,
+    margin: 0,
+    height: 80,
     borderColor: '#7a42f4',
     borderWidth: 1
  },

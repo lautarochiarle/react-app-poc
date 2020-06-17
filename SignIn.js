@@ -20,11 +20,9 @@ export class CustomSignIn extends Component {
   }  
   
  handleEmail = (text) => {
-    alert(text);
     this.setState({ email: text })
  }
  handlePassword = (text) => {
-    alert(text);
     this.setState({ password: text })
  }
 
@@ -65,22 +63,29 @@ export class CustomSignIn extends Component {
        <TextInput style = {styles.input}
              underlineColorAndroid = "transparent"
              placeholder = "Email"
+             accessibilityLabel ='emailField'
              placeholderTextColor = "#9a73ef"
              autoCapitalize = "none"
-             onChangeText = {this.handleEmail}/>
+             onChangeText = {this.handleEmail}
+             accessibilityLabel='emailField'
+             />
           
           <TextInput style = {styles.input}
              underlineColorAndroid = "transparent"
              placeholder = "Password"
+             accessibilityLabel ='passwordField'
              placeholderTextColor = "#9a73ef"
              autoCapitalize = "none"
+             accessibilityLabel='passwordField'
              onChangeText = {this.handlePassword}/>
           
           <TouchableOpacity
              style = {styles.submitButton}
+             accessibilityLabel ='submitButton'
              onPress = {this.signIn}>
              <Text style = {styles.submitButtonText}> Submit </Text>
           </TouchableOpacity>
+          <Text>{this.state.error}</Text>
           </View>
               )}
        </View>

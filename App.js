@@ -12,14 +12,10 @@ Amplify.configure(awsConfig);
 
 
 function App() {
-  return (
-    
-      
+  return (  
         <Authenticator hideDefault={true} amplifyConfig={awsConfig}>
           <AuthWrapper />
         </Authenticator>
-      
-    
   );
 }
 

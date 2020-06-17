@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "./src/logo.svg";
+import logo from "./src/logo.png";
 import { StyleSheet, Text, View, Image} from 'react-native';
 import Home from './screens/Home'
 

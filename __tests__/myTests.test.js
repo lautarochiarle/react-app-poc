@@ -9,7 +9,7 @@ const driver = wd.promiseChainRemote('localhost', PORT);
 
 beforeAll(async () => {
     await driver.init(config);
-    await driver.sleep(3000);
+    await driver.sleep(20000);
     }) // Sometime for the app to load
     test('my first appium test', async () => {
     expect(await driver.hasElementByAccessibilityId('submitButton')).toBe(true);

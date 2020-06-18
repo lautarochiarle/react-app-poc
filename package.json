@@ -23,15 +23,15 @@
     "react-native-unimodules": "~0.9.0",
     "react-native-web": "~0.11.7",
     "@react-native-community/netinfo": "^5.9.2",
-    "appium": "^1.17.1",
-    "appium-doctor": "^1.15.3",
     "aws-amplify": "^3.0.16",
     "aws-amplify-react-native": "^4.2.0",
     "logkitty": "~0.7.1",
     "react-native-paper": "^3.10.1",
-    "wd": "^1.12.1"
   },
   "devDependencies": {
+    "wd": "^1.12.1",
+    "appium": "^1.17.1",
+    "appium-doctor": "^1.15.3",    
     "@babel/core": "^7.8.6",
     "babel-jest": "~25.2.6",
     "jest": "~25.2.6",
